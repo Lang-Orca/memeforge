@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memeforge MVP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Memeforge</h1>
+        <p>Créez un mème avec du texte et téléchargez le résultat.</p>
+      </header>
+
+      <section class="form-card">
+        <label for="memeText">Texte du mème</label>
+        <textarea id="memeText" rows="5" placeholder="Écris ton texte ici..."></textarea>
+        <button id="generateButton" type="button">Générer</button>
+        <div id="status" class="status" aria-live="polite"></div>
+      </section>
+
+      <section id="result" class="result hidden" aria-live="polite">
+        <img id="memeImage" alt="Mème généré" />
+        <div class="actions">
+          <button id="downloadButton" type="button">Télécharger</button>
+          <button id="copyUrlButton" type="button">Copier le lien</button>
+        </div>
+      </section>
+
+      <footer class="legal">
+        <p><strong>Avertissement :</strong> contenu généré par IA — peut être imprécis ou inapproprié.</p>
+        <p>
+          En utilisant Memeforge, vous acceptez nos
+          <a href="#">Conditions Générales d’Utilisation</a> et notre
+          <a href="#">Politique de Confidentialité</a>.
+        </p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

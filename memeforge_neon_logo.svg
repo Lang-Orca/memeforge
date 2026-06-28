@@ -1,0 +1,47 @@
+<svg width="100%" viewBox="0 0 690 490" xmlns="http://www.w3.org/2000/svg" role="img" style="">
+<title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Logo Memeforge</title>
+<desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Logo néon gaming pour l'application Memeforge : un emblème circulaire bleu foncé avec une enclume stylisée et un éclair, accompagné du nom de l'app en typographie bold avec effet lumineux.</desc>
+<defs>
+<linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#0a0e1a"/>
+<stop offset="100%" stop-color="#0d1428"/>
+</linearGradient>
+<linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#00d4ff"/>
+<stop offset="100%" stop-color="#0066ff"/>
+</linearGradient>
+<radialGradient id="glowCore" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#00eaff" stop-opacity="0.35"/>
+<stop offset="100%" stop-color="#00eaff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#7df9ff"/>
+<stop offset="100%" stop-color="#1e90ff"/>
+</linearGradient>
+</defs>
+
+<rect x="0" y="0" width="680" height="480" fill="url(#bgGrad)" style="stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<circle cx="340" cy="190" r="170" fill="url(#glowCore)" style="stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<circle cx="340" cy="190" r="118" fill="#0d1428" stroke="url(#ringGrad)" stroke-width="4" style="fill:rgb(13, 20, 40);color:rgb(11, 11, 11);stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<circle cx="340" cy="190" r="100" fill="none" stroke="#0066ff" stroke-width="1" opacity="0.5" style="fill:none;stroke:rgb(0, 102, 255);color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<g transform="translate(340,190)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+<path d="M -8 -55 L 22 -10 L 2 -10 L 16 50 L -28 -2 L -8 -2 Z" fill="url(#boltGrad)" stroke="#00eaff" stroke-width="1" style="stroke:rgb(0, 234, 255);color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+</g>
+
+<circle cx="340" cy="190" r="118" fill="none" stroke="#00eaff" stroke-width="1" opacity="0.6" style="fill:none;stroke:rgb(0, 234, 255);color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.6;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<g opacity="0.9" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+<circle cx="226" cy="120" r="3" fill="#00d4ff" style="fill:rgb(0, 212, 255);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<circle cx="456" cy="260" r="2.5" fill="#1e90ff" style="fill:rgb(30, 144, 255);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<circle cx="240" cy="270" r="2" fill="#00eaff" style="fill:rgb(0, 234, 255);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<circle cx="448" cy="115" r="2.5" fill="#00d4ff" style="fill:rgb(0, 212, 255);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+</g>
+
+<text x="340" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#0066ff" opacity="0.4" style="fill:rgb(0, 102, 255);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:Arial, sans-serif;font-size:56px;font-weight:700;text-anchor:middle;dominant-baseline:auto">MEMEFORGE</text>
+<text x="340" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#e6faff" style="fill:rgb(230, 250, 255);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:56px;font-weight:700;text-anchor:middle;dominant-baseline:auto">MEME<tspan fill="#00d4ff" style="fill:rgb(0, 212, 255);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:56px;font-weight:700;text-anchor:middle;dominant-baseline:auto">FORGE</tspan></text>
+
+<text x="340" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#5fb8d9" letter-spacing="3" style="fill:rgb(95, 184, 217);stroke:none;color:rgb(11, 11, 11);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:15px;font-weight:400;text-anchor:middle;dominant-baseline:auto">FORGE YOUR MEMES</text>
+</svg>
