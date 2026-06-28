@@ -15,19 +15,31 @@ export interface GenerateMemeResponse {
 export async function generateMeme(
   params: GenerateMemeParams
 ): Promise<GenerateMemeResponse> {
-  // Simulate network latency
-  await new Promise((resolve) => setTimeout(resolve, 1500));
+  const BASE_URL = 'https://meme-ms6hdvj85-marcs-projects-e5f4b165.vercel.app';
 
-  // Return a stable placeholder image. Replace this logic with real API call.
-  // Example of real call:
-  // const res = await fetch('https://api.example.com/generate-meme', { method: 'POST', body: JSON.stringify(params) })
-  // const json = await res.json();
-  // return { memeUrl: json.meme_url };
+  try {
+    const res = await fetch(`${BASE_URL}/api/generate-meme`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(params),
+    });
 
-  return {
-    memeUrl:
-      'https://via.placeholder.com/1024x1024.png?text=Memeforge+Meme+Placeholder',
-  };
+    if (!res.ok) {
+      throw new Error(`API error ${res.status}`);
+    }
+
+    const json = await res.json();
+    // Expecting { memeUrl: string } or { meme_url: string }
+    return { memeUrl: json.memeUrl ?? json.meme_url ?? json.url };
+  } catch (err) {
+    // Fallback to placeholder image on network or parsing failure
+    await new Promise<void>((resolve) => setTimeout(() => resolve(), 500));
+    return {
+      memeUrl: `https://via.placeholder.com/1024x1024.png?text=${encodeURIComponent(
+        params.text || 'Memeforge'
+      )}`,
+    };
+  }
 }
 
 export interface GenerateChatStickerParams {
@@ -42,20 +54,32 @@ export interface GenerateChatStickerResponse {
 export async function generateStickersFromChat(
   params: GenerateChatStickerParams
 ): Promise<GenerateChatStickerResponse> {
-  await new Promise((resolve) => setTimeout(resolve, 1500));
+  const BASE_URL = 'https://meme-ms6hdvj85-marcs-projects-e5f4b165.vercel.app';
 
-  const lines = params.chatText
-    .split(/\r?\n/)
-    .map((line) => line.trim())
-    .filter(Boolean);
-  const title = lines.length > 0 ? lines[0].slice(0, 40) : 'Chat WhatsApp';
+  try {
+    const res = await fetch(`${BASE_URL}/api/generate-sticker`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(params),
+    });
 
-  return {
-    stickerUrl: `https://via.placeholder.com/1024x1024.png?text=${encodeURIComponent(
-      `Sticker ${title}`
-    )}`,
-    summary: `Sticker généré à partir de la conversation WhatsApp`,
-  };
+    if (!res.ok) throw new Error(`API error ${res.status}`);
+
+    const json = await res.json();
+    return { stickerUrl: json.stickerUrl ?? json.sticker_url ?? json.url, summary: json.summary ?? '' };
+  } catch (err) {
+    await new Promise<void>((resolve) => setTimeout(() => resolve(), 500));
+    const lines = params.chatText
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean);
+    const title = lines.length > 0 ? lines[0].slice(0, 40) : 'Chat WhatsApp';
+
+    return {
+      stickerUrl: `https://via.placeholder.com/1024x1024.png?text=${encodeURIComponent(`Sticker ${title}`)}`,
+      summary: `Sticker généré à partir de la conversation WhatsApp`,
+    };
+  }
 }
 
 // Branching note:

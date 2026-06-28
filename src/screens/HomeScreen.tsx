@@ -4,8 +4,23 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/AppNavigator';
 import BrandLogo from '../components/BrandLogo';
+import GlassCard from '../components/GlassCard';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'HomeScreen'>;
+
+type HomeOption = {
+  key: 'text' | 'image' | 'voice' | 'whatsapp';
+  title: string;
+  emoji: string;
+  screen: 'TextGeneratorScreen' | 'ImageGeneratorScreen' | 'VoiceGeneratorScreen' | 'ChatStickerScreen';
+};
+
+const options: HomeOption[] = [
+  { key: 'text', title: 'Créer à partir d\'un texte', emoji: '✨', screen: 'TextGeneratorScreen' },
+  { key: 'image', title: 'Transformer une photo', emoji: '📸', screen: 'ImageGeneratorScreen' },
+  { key: 'voice', title: 'Créer avec ta voix', emoji: '🎙️', screen: 'VoiceGeneratorScreen' },
+  { key: 'whatsapp', title: 'Sticker depuis WhatsApp', emoji: '💬', screen: 'ChatStickerScreen' },
+];
 
 export default function HomeScreen({ navigation }: Props) {
   return (
@@ -14,21 +29,21 @@ export default function HomeScreen({ navigation }: Props) {
       <View style={styles.glow2} />
       <BrandLogo size={72} />
       <Text style={styles.title}>Memeforge</Text>
-      <Text style={styles.subtitle}>Créez un mème depuis du texte, une image ou votre voix.</Text>
+      <Text style={styles.subtitle}>Crée un mème en quelques secondes, depuis du texte, une image ou ta voix</Text>
 
-      <View style={styles.card}>
-        <TouchableOpacity style={styles.primaryButton} onPress={() => navigation.navigate('TextGeneratorScreen')}>
-          <Text style={styles.primaryButtonText}>Créer depuis du texte</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.secondaryButton} onPress={() => navigation.navigate('ImageGeneratorScreen')}>
-          <Text style={styles.secondaryButtonText}>Créer depuis une image</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.secondaryButton} onPress={() => navigation.navigate('VoiceGeneratorScreen')}>
-          <Text style={styles.secondaryButtonText}>Créer depuis la voix</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.secondaryButton} onPress={() => navigation.navigate('ChatStickerScreen')}>
-          <Text style={styles.secondaryButtonText}>Sticker WhatsApp</Text>
-        </TouchableOpacity>
+      <View style={styles.optionsList}>
+        {options.map((option) => (
+          <TouchableOpacity key={option.key} activeOpacity={0.9} onPress={() => navigation.navigate(option.screen)}>
+            <GlassCard style={styles.optionCard}>
+              <View style={styles.optionRow}>
+                <Text style={styles.optionEmoji}>{option.emoji}</Text>
+                <View style={styles.optionTextWrapper}>
+                  <Text style={styles.optionTitle}>{option.title}</Text>
+                </View>
+              </View>
+            </GlassCard>
+          </TouchableOpacity>
+        ))}
       </View>
     </SafeAreaView>
   );
@@ -38,11 +53,18 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 24, backgroundColor: '#0a0e1a' },
   glow: { position: 'absolute', width: 220, height: 220, borderRadius: 110, backgroundColor: 'rgba(0,212,255,0.16)', top: -40, left: -40 },
   glow2: { position: 'absolute', width: 260, height: 260, borderRadius: 130, backgroundColor: 'rgba(120,80,255,0.14)', bottom: -80, right: -60 },
-  title: { fontSize: 32, fontWeight: '700', color: '#eaf6ff', marginTop: 12 },
-  subtitle: { marginTop: 8, color: '#7fa8c9', fontSize: 15, lineHeight: 22 },
-  card: { marginTop: 24, backgroundColor: 'rgba(255,255,255,0.06)', borderColor: 'rgba(255,255,255,0.12)', borderWidth: 1, borderRadius: 18, padding: 18 },
-  primaryButton: { backgroundColor: '#00d4ff', borderRadius: 14, paddingVertical: 14, alignItems: 'center', marginBottom: 12 },
-  primaryButtonText: { color: '#07111d', fontWeight: '700' },
-  secondaryButton: { backgroundColor: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.12)', borderWidth: 1, borderRadius: 14, paddingVertical: 14, alignItems: 'center', marginBottom: 12 },
-  secondaryButtonText: { color: '#eaf6ff', fontWeight: '600' },
+  title: { fontSize: 32, fontWeight: '700', color: '#f7fbff', marginTop: 12 },
+  subtitle: { marginTop: 8, color: '#8eaacc', fontSize: 15, lineHeight: 22, marginBottom: 20, maxWidth: 320 },
+  optionsList: { gap: 12 },
+  optionCard: {
+    paddingVertical: 16,
+    paddingHorizontal: 14,
+    backgroundColor: 'rgba(255,255,255,0.06)',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.08)',
+  },
+  optionRow: { flexDirection: 'row', alignItems: 'center' },
+  optionEmoji: { fontSize: 20, marginRight: 12, width: 32, textAlign: 'center' },
+  optionTextWrapper: { flex: 1 },
+  optionTitle: { color: '#f7fbff', fontWeight: '700', fontSize: 15 },
 });

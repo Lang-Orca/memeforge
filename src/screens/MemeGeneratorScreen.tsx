@@ -25,7 +25,7 @@ function containsForbiddenWord(input: string): boolean {
   return FORBIDDEN_WORDS.some((w) => lower.includes(w.toLowerCase()));
 }
 
-export default function MemeGeneratorScreen(): JSX.Element {
+export default function MemeGeneratorScreen(): React.ReactElement {
   const [text, setText] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>(MEME_CATEGORIES[0].id);
   const [memeUrl, setMemeUrl] = useState<string | null>(null);

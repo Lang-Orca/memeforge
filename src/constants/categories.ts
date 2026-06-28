@@ -1,14 +1,14 @@
 export interface MemeCategory {
   id: string;
   label: string;
-  icon: string; // emoji or short icon string
+  icon: string; // emoji
 }
 
 export const MEME_CATEGORIES: MemeCategory[] = [
-  { id: 'funny', label: 'Drôle', icon: '😄' },
+  { id: 'funny', label: 'Drôle', icon: '😂' },
   { id: 'sarcastic', label: 'Sarcastique', icon: '😏' },
   { id: 'motivation', label: 'Motivation', icon: '💪' },
-  { id: 'relatable', label: 'Relatable', icon: '🤝' },
+  { id: 'relatable', label: 'Relatable', icon: '🙃' },
   { id: 'dark', label: 'Humour noir', icon: '🖤' },
   { id: 'trending', label: 'Tendance', icon: '🔥' },
 ];

@@ -3,7 +3,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Alert, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/AppNavigator';
-import { generateStickersFromChat } from '../services/MemeApiPlaceholder';
+import { generateStickersFromChat } from '../services/MemeApiService';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'ChatStickerScreen'>;
 
