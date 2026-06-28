@@ -1,2 +1,2 @@
 // Export all screens from this file
-// export * from './MyScreen';
+export { default as GenerateMeme } from './GenerateMeme';
