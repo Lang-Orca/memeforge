@@ -12,13 +12,17 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 
+import { MemeProvider } from './src/context/MemeContext';
+
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
+      <MemeProvider>
+        <AppContent />
+      </MemeProvider>
     </SafeAreaProvider>
   );
 }
